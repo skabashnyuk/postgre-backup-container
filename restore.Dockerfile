@@ -9,7 +9,7 @@ ENV PGPASSWORD='password'
 RUN apk update
 RUN apk add postgresql
 
-COPY dumpDatabase.sh .
+COPY restore.sh .
 
 ENTRYPOINT [ "/bin/sh" ]
-CMD [ "./dumpDatabase.sh" ]
+CMD [ "./restore.sh" ]
